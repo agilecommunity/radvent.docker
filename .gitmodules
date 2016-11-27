@@ -1,0 +1,6 @@
+[submodule "app/radvent"]
+	path = app/radvent
+	url = https://github.com/nanonanomachine/radvent
+[submodule "app/src"]
+	path = app/src
+	url = https://github.com/nanonanomachine/radvent
