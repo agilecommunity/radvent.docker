@@ -1,0 +1,17 @@
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development.sqlite3
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  host: <%= ENV['RAILS_DATABASE_HOST'] %>
+  database: <%= ENV['RAILS_DATABASE_INSTANCE'] %>
+  username: <%= ENV['RAILS_DATABASE_USERNAME'] %>
+  password: <%= ENV['RAILS_DATABASE_PASSWORD'] %>

@@ -8,9 +8,12 @@ services:
     environment:
       RAILS_ENV: production
       RAILS_SECRET_KEY_BASE: $RAILS_SECRET_KEY_BASE
-      DATABASE_URL: $DATABASE_URL
+      RAILS_DATABASE_HOST: radvent_db
+      RAILS_DATABASE_INSTANCE: $RADVENT_DB
+      RAILS_DATABASE_USERNAME: $RADVENT_DB_USER
+      RAILS_DATABASE_PASSWORD: $RADVENT_DB_PASSWORD
     links:
-      - db:radventdb
+      - db:radvent_db
   db:
     image: postgres:9.6
     environment:

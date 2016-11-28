@@ -22,4 +22,5 @@ RUN    mv vendor/assets/javascripts/* app/assets/javascripts/ \
     && bundle exec rake assets:precompile assets:clean
 
 EXPOSE 3000
+
 CMD ["rails", "server", "-b", "0.0.0.0"]
